@@ -19,6 +19,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "unistd.h"
 
 Joystick::Joystick()
 {
