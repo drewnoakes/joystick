@@ -1,10 +1,10 @@
-joystick++
-==========
+# joystick++
+
+![stable](http://badges.github.io/stability-badges/dist/stable.svg)
 
 A minimal C++ object-oriented API onto joystick devices under Linux.
 
-usage
-=====
+# usage
 
 Create an instance of `Joystick`:
 
@@ -26,8 +26,7 @@ Sample events from the `Joystick`:
       // use 'event'
     }
 
-example
-=======
+# example
 
 You might run this in a loop:
 
@@ -60,8 +59,7 @@ This produces something similar to:
     Axis 2 is at position 9796
     Axis 3 is at position -13850
 
-options
-=======
+# options
 
 You can specify the particular joystick by id:
 
@@ -72,9 +70,8 @@ Or provide a specific device name:
 
     Joystick js0("/dev/input/js0");
 
-license
-=======
+# license
 
 Released under [LGPL v3](http://www.gnu.org/copyleft/lesser.html).
 
-Copyright [Drew Noakes](http://drewnoakes.com) 2013.
+Copyright [Drew Noakes](http://drewnoakes.com) 2013-2014.
