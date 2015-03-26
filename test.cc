@@ -12,6 +12,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 #include "joystick.hh"
+#include <unistd.h>
 
 int main(int argc, char** argv)
 {
