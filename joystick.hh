@@ -26,6 +26,12 @@
 class JoystickEvent
 {
 public:
+  /** Minimum value of axes range */
+  static const short MIN_AXES_VALUE = -32768;
+
+  /** Minimum value of axes range */
+  static const short MAX_AXES_VALUE = 32767;
+  
   /**
    * The timestamp of the event, in milliseconds.
    */
@@ -34,7 +40,7 @@ public:
   /**
    * The value associated with this joystick event.
    * For buttons this will be either 1 (down) or 0 (up).
-   * For axes, this will range between -32768 and 32767.
+   * For axes, this will range between MIN_AXES_VALUE and MAX_AXES_VALUE.
    */
   short value;
   
