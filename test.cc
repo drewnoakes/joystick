@@ -17,7 +17,7 @@
 int main(int argc, char** argv)
 {
   // Create an instance of Joystick
-  Joystick joystick("/dev/input/js1");
+  Joystick joystick("/dev/input/js0");
 
   // Ensure that it was found and that we can use it
   if (!joystick.isFound())
