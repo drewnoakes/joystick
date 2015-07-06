@@ -1,6 +1,6 @@
 # joystick++
 
-![stable](http://badges.github.io/stability-badges/dist/stable.svg)
+[![Issue Stats](http://issuestats.com/github/drewnoakes/joystick/badge/pr?style=flat)](http://issuestats.com/github/drewnoakes/joystick)
 
 A minimal C++ object-oriented API onto joystick devices under Linux.
 
