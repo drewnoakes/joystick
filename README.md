@@ -8,7 +8,7 @@ A minimal C++ object-oriented API onto joystick devices under Linux.
 
 Create an instance of `Joystick`:
 
-    Joystick joystick();
+    Joystick joystick;
 
 Ensure that it was found and that we can use it:
 
