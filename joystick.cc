@@ -63,4 +63,4 @@ bool Joystick::isFound()
 Joystick::~Joystick()
 {
   close(_fd);
-};
+}
