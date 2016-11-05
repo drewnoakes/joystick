@@ -87,7 +87,7 @@ public:
 class Joystick
 {
 private:
-  void openPath(std::string devicePath);
+  void openPath(std::string devicePath, bool blocking=false);
   
   int _fd;
   
@@ -109,6 +109,12 @@ public:
    * Initialises an instance for the joystick device specified.
    */
   Joystick(std::string devicePath);
+
+  /**
+   * Initialises an instance for the joystick device specified and provide
+   * the option of blocking I/O.
+   */
+  Joystick(std::string devicePath, bool blocking);
  
   /**
    * Returns true if the joystick was found and may be used, otherwise false.

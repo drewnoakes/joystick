@@ -39,9 +39,17 @@ Joystick::Joystick(std::string devicePath)
   openPath(devicePath);
 }
 
-void Joystick::openPath(std::string devicePath)
+Joystick::Joystick(std::string devicePath, bool blocking)
 {
-  _fd = open(devicePath.c_str(), O_RDONLY | O_NONBLOCK);
+  openPath(devicePath, blocking);
+}
+
+void Joystick::openPath(std::string devicePath, bool blocking)
+{
+  if (blocking)
+    _fd = open(devicePath.c_str(), O_RDONLY);
+  else
+    _fd = open(devicePath.c_str(), O_RDONLY | O_NONBLOCK);
 }
 
 bool Joystick::sample(JoystickEvent* event)
