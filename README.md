@@ -72,6 +72,6 @@ Or provide a specific device name:
 
 # license
 
-Released under [LGPL v3](http://www.gnu.org/copyleft/lesser.html).
+Released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-Copyright [Drew Noakes](http://drewnoakes.com) 2013-2014.
+Copyright [Drew Noakes](http://drewnoakes.com) 2013-2016.
