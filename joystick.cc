@@ -46,10 +46,8 @@ Joystick::Joystick(std::string devicePath, bool blocking)
 
 void Joystick::openPath(std::string devicePath, bool blocking)
 {
-  if (blocking)
-    _fd = open(devicePath.c_str(), O_RDONLY);
-  else
-    _fd = open(devicePath.c_str(), O_RDONLY | O_NONBLOCK);
+  // Open the device using either blocking or non-blocking
+  _fd = open(devicePath.c_str(), blocking ? O_RDONLY : O_RDONLY | O_NONBLOCK);
 }
 
 bool Joystick::sample(JoystickEvent* event)
