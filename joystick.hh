@@ -16,6 +16,7 @@
 #define __JOYSTICK_HH__
 
 #include <string>
+#include <iostream>
 
 #define JS_EVENT_BUTTON 0x01 // button pressed/released
 #define JS_EVENT_AXIS   0x02 // joystick moved
@@ -79,7 +80,19 @@ public:
   {
     return (type & JS_EVENT_INIT) != 0;
   }
+
+  /**
+   * The ostream inserter needs to be a friend so it can access the
+   * internal data structures.
+   */
+  friend std::ostream& operator<<(std::ostream& os, const JoystickEvent& e);
 };
+
+/**
+ * Stream insertion function so you can do this:
+ *    cout << event << endl;
+ */
+std::ostream& operator<<(std::ostream& os, const JoystickEvent& e);
 
 /**
  * Represents a joystick device. Allows data to be sampled from it.

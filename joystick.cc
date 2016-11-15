@@ -71,3 +71,13 @@ Joystick::~Joystick()
 {
   close(_fd);
 }
+
+std::ostream& operator<<(std::ostream& os, const JoystickEvent& e)
+{
+  os << "type=" << static_cast<int>(e.type)
+     << " number=" << static_cast<int>(e.number)
+     << " value=" << static_cast<int>(e.value);
+  return os;
+}
+
+
