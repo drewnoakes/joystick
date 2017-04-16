@@ -124,6 +124,16 @@ public:
   Joystick(std::string devicePath);
 
   /**
+   * Joystick objects cannot be copied
+   */
+  Joystick(Joystick const&) = delete;
+
+  /**
+   * Joystick objects can be moved
+   */
+  Joystick(Joystick &&) = default;
+
+  /**
    * Initialises an instance for the joystick device specified and provide
    * the option of blocking I/O.
    */
