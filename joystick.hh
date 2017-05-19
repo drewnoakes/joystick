@@ -31,7 +31,7 @@ public:
   /** Minimum value of axes range */
   static const short MIN_AXES_VALUE = -32768;
 
-  /** Minimum value of axes range */
+  /** Maximum value of axes range */
   static const short MAX_AXES_VALUE = 32767;
   
   /**
